@@ -1,10 +1,8 @@
 package com.codingTech.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
+
 @Entity
 @Table(name="role_spring")
 
@@ -13,9 +11,35 @@ public class Role {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long id;
     public String nomRole;
+    @OneToMany(mappedBy = "role")
+    private List<User> users;
 
     public Role(String nomRole) {
         this.nomRole = nomRole;
+    }
+
+    public Role(long id, String nomRole) {
+        this.id = id;
+        this.nomRole = nomRole;
+    }
+
+    public Role(long id, String nomRole, List<User> users) {
+        this.id = id;
+        this.nomRole = nomRole;
+        this.users = users;
+    }
+
+    public Role(String nomRole, List<User> users) {
+        this.nomRole = nomRole;
+        this.users = users;
+    }
+
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
     }
 
     public Role() {

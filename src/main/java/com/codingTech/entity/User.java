@@ -9,7 +9,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name="user_spring")
-
 public class User {
 	 @Id
 	  @GeneratedValue(strategy = GenerationType.IDENTITY)

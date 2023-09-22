@@ -1,4 +1,4 @@
-package com.codingTech.service;
+package com.codingTech.Service;
 
 import com.codingTech.entity.Role;
 import com.codingTech.entity.User;
@@ -17,34 +17,35 @@ import java.util.List;
 public class CustemUserDetailService implements UserDetailsService {
 
     @Autowired
-    IUserService userService;
+	IUserService userService;
     @Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-		
+
 		User user=userService.chercherParEmail(email);
-		
-		if(user==null)
-		{
+
+
+
+		if(user==null) {
+
 			throw new UsernameNotFoundException(email);
 		}
-		
+
 		List<GrantedAuthority> authorities=getGrantedAuthority(user);
-		
+
+
 		return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(),authorities);
-		
-		
+
 
 	}
-	
-	private List<GrantedAuthority> getGrantedAuthority(User u)
-	{
+
+	private List<GrantedAuthority> getGrantedAuthority(User u) {
 		List<GrantedAuthority> liste= new ArrayList<>();
-		
-			liste.add(new SimpleGrantedAuthority(u.getRole().getNomRole()));
-		
-		
+
+		liste.add(new SimpleGrantedAuthority(u.getRole().getNomRole()));
+
+
 		return liste;
-		
+
 	}
 
 }

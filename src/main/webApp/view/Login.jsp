@@ -1,10 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-   <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
    
    <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>Loginn</title>
+    <title>Login</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
@@ -34,7 +34,7 @@
 						action="/traitement" method="post" class="auth-form login-form">         
 							<div class="email mb-3">
 								<label class="sr-only" for="email">Email</label>
-								<input id="email" name="email" type="email" class="form-control signin-email" placeholder="Email address" required="required">
+								<input id="email" name="username" type="email" class="form-control signin-email" placeholder="Email address" required="required">
 							</div><!--//form-group-->
 							<div class="password mb-3">
 								<label class="sr-only" for="password">Password</label>
@@ -50,7 +50,7 @@
 								<button type="submit" class="btn app-btn-primary w-100 theme-btn mx-auto">Log In</button>
 							</div>
 						</form:form>
-<div class="auth-option text-center pt-5">Créer un compte? <a class="text-link" href="signup.jsp" >Sign up</a></div>
+<div class="auth-option text-center pt-5">Créer un compte? <a class="text-link" href="/Signup" >Sign up</a></div>
 						
 						
 					</div><!--//auth-form-container-->	
