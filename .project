@@ -25,6 +25,7 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 	</natures>
+<<<<<<< HEAD
 	<filteredResources>
 		<filter>
 			<id>1695395633599</id>
@@ -36,4 +37,13 @@
 			</matcher>
 		</filter>
 	</filteredResources>
+=======
+	<linkedResources>
+		<link>
+			<name>java</name>
+			<type>2</type>
+			<location>C:/Users/hajar/Documents/workspace-spring-tool-suite-4-4.19.1.RELEASE/Ecommerce_SpringBoot/src/main/java</location>
+		</link>
+	</linkedResources>
+>>>>>>> main
 </projectDescription>
