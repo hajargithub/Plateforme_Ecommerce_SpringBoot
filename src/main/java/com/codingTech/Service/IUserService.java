@@ -1,4 +1,4 @@
-package com.codingTech.service;
+package com.codingTech.Service;
 import com.codingTech.entity.User;
 
 public interface IUserService {

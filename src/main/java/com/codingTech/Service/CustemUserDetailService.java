@@ -1,4 +1,4 @@
-package com.codingTech.service;
+package com.codingTech.Service;
 
 import com.codingTech.entity.Role;
 import com.codingTech.entity.User;
@@ -22,6 +22,8 @@ public class CustemUserDetailService implements UserDetailsService {
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		
 		User user=userService.chercherParEmail(email);
+		System.out.println("email"+user.getEmail());
+		System.out.println("email"+user.getPassword());
 		
 		if(user==null)
 		{
@@ -32,8 +34,6 @@ public class CustemUserDetailService implements UserDetailsService {
 		
 		return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(),authorities);
 		
-		
-
 	}
 	
 	private List<GrantedAuthority> getGrantedAuthority(User u)

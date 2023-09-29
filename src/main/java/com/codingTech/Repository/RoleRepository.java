@@ -1,4 +1,4 @@
-package com.codingTech.repository;
+package com.codingTech.Repository;
 
 import com.codingTech.entity.Role;
 import org.springframework.data.jpa.repository.JpaRepository;

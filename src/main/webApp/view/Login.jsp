@@ -4,7 +4,7 @@
    <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>Loginn</title>
+    <title>Login</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
@@ -34,7 +34,7 @@
 						action="/traitement" method="post" class="auth-form login-form">         
 							<div class="email mb-3">
 								<label class="sr-only" for="email">Email</label>
-								<input id="email" name="email" type="email" class="form-control signin-email" placeholder="Email address" required="required">
+								<input id="email"  name="username" type="email" class="form-control signin-email" placeholder="Email address" required="required">
 							</div><!--//form-group-->
 							<div class="password mb-3">
 								<label class="sr-only" for="password">Password</label>

@@ -1,6 +1,6 @@
-package com.codingTech.service;
+package com.codingTech.Service;
 
-import com.codingTech.repository.UserRepository;
+import com.codingTech.Repository.UserRepository;
 import com.codingTech.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

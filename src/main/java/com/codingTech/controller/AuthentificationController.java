@@ -21,7 +21,7 @@ public class AuthentificationController {
 	}
 	@RequestMapping("/user/bonjour")
 	public String afficher1() {
-		return "useBonjour";
+		return "userBonjour";
 		
 	}
 	@RequestMapping("/home")
